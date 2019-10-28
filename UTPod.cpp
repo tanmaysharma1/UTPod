@@ -8,6 +8,7 @@ UTPod::UTPod{
     memSize=MAX_MEMORY;
 }
 UTPod::UtPod(int size){
+    
     songs->next =NULL;
     if(size>MAX_MEMORY || size <1)
     {
@@ -18,9 +19,11 @@ UTPod::UtPod(int size){
     }
 }
 int UTPod:: addSong(Song const &s) {
-    songs->next = s;
-    songs= *s;
-    songs->s=s;
+    SongNode *temp = new SongNode;
+    temp->next = songs;
+    temp->s = s;
+    songs = temp;
+    return SUCCESS;
     
 }
 int UTPod:: removeSong(Song const &s) {

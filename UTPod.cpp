@@ -8,5 +8,18 @@ UTPod::UTPod{
 }
 UTPod::UtPod(int size){
 }
-int addSong(Song const &s){
+int UTPod:: addSong(Song const &s) {
+}
+int UTPod:: removeSong(Song const &s) {
+}
+void UTPod:: shuffle(){
+}
+void UTPod:: showSongList(){
+}
+void UTPod:: clearMemory(){
+}
+int UTPod:: getTotalMemory(){
+        return memSize;
+}
+int UTPod:: getRemainingMemory(){
 }

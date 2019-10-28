@@ -5,5 +5,8 @@
 #include "UTPod.h"
 UTPod::UTPod{
     memSize=MAX_MEMORY;
-
-};
+}
+UTPod::UtPod(int size){
+}
+int addSong(Song const &s){
+}

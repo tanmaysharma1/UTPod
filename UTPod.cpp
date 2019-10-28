@@ -31,7 +31,34 @@ int UtPod:: addSong(Song const &s) {
     
 }
 int UtPod:: removeSong(Song const &s) {
-    numSongs--;
+    SongNode *temp = songs;
+    if (temp == NULL)
+    {
+        return NOT_FOUND;
+    }
+    if (temp->s == s)
+    {
+        songs = temp->next;
+        delete temp;
+    }
+    else
+    {
+        while (temp->next != NULL)
+        {
+            if (temp->next->s == s)
+            {
+                SongNode *found = temp->next;
+                temp->next = temp->next->next;
+                delete found;
+                return SUCCESS;
+            }
+            else
+            {
+                temp = temp->next;
+            }
+        }
+    }
+    return NOT_FOUND;
 }
 void UtPod:: swap(Song const &s1, Song const &s2)
 {

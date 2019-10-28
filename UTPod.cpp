@@ -7,6 +7,13 @@ UTPod::UTPod{
     memSize=MAX_MEMORY;
 }
 UTPod::UtPod(int size){
+    if(size>MAX_MEMORY || size <1)
+    {
+        memSize == MAX_MEMORY;
+    }
+    else{
+    memSize == size;
+    }
 }
 int UTPod:: addSong(Song const &s) {
 }

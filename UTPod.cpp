@@ -4,9 +4,11 @@
 
 #include "UTPod.h"
 UTPod::UTPod{
+    songs->next =NULL;
     memSize=MAX_MEMORY;
 }
 UTPod::UtPod(int size){
+    songs->next =NULL;
     if(size>MAX_MEMORY || size <1)
     {
         memSize == MAX_MEMORY;
@@ -16,6 +18,10 @@ UTPod::UtPod(int size){
     }
 }
 int UTPod:: addSong(Song const &s) {
+    songs->next = s;
+    songs= *s;
+    songs->s=s;
+    
 }
 int UTPod:: removeSong(Song const &s) {
 }

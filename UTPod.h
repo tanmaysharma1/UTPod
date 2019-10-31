@@ -20,7 +20,7 @@ private:
     };
 
     SongNode *songs;  //the head pointer
-    int numSongs;
+
     int memSize;
 
 public:

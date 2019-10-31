@@ -17,7 +17,7 @@ public:
     Song(string title, string artist, int size);
     void setName(string name);
     string getName();
-    void setTitle(string title);
+    void setTitle(string title1);
     string getTitle();
     void setSize(int size);
     int getSize();

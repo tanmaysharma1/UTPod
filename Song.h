@@ -19,7 +19,7 @@ public:
     string getName();
     void setTitle(string title1);
     string getTitle();
-    void setSize(int size);
+    void setSize(int size1);
     int getSize();
 
     bool operator >(Song const &rhs);

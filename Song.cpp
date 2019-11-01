@@ -2,33 +2,38 @@
 // Created by tanma on 10/31/2019.
 //
 #include "Song.h"
-#include <stdlib.h> 
-Song::Song(int size1, string artist1, string title1){
+#include <stdlib.h>
+Song::Song(){
+    size=0;
+    artist="";
+    title="";
+}
+Song::Song(string title1,string artist1, int size1){
+      size=size1;
+      artist=artist1;
+      title=title1;
+    }
+void Song:: setArtist(string name1){
+      artist=name1;
+
+    }
+string Song:: getArtist(){
+      return artist;
+    }
+void Song:: setTitle(string title1){
+      title=title1;
+
+    }
+string Song:: getTitle(){
+      return title;
+    }
+void Song:: setSize(int size1){
   size=size1;
-  artist=artist1;
-  title=title1;
 }
-void Song::Song setName(string name){
-  artist=name1;
-  
-}
-string Song::Song getName(){
-  return artist;  
-}
-void Song::Song setTitle(string title1){
-  title=title1;
-  
-}
-string Song::Song getTitle(){
-  return title;  
-}
-void Song:Song setSize(int size1){
-  size=size1;
-}
-int Song:Song getSize(){
+int Song:: getSize(){
   return size;
 }
-bool operator >(Song const &rhs){
+bool Song:: operator >(Song const &rhs){
   if(artist < rhs.artist){
     return true;
   }
@@ -40,7 +45,7 @@ bool operator >(Song const &rhs){
   }
   return false;
 }
-bool operator <(Song const &rhs){
+bool Song:: operator <(Song const &rhs){
   if(artist > rhs.artist){
     return true;
   }
@@ -52,7 +57,7 @@ bool operator <(Song const &rhs){
   }
   return false;
 }
-bool operator ==(Song const &rhs){
+bool Song:: operator ==(Song const &rhs){
   if(artist == rhs.artist){
     return true;
   }

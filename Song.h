@@ -11,12 +11,11 @@ private:
     string artist; 
     string title; 
 
-public: 
+public:
     Song();
-    Song(string title);
-    Song(string title, string artist, int size);
-    void setName(string name);
-    string getName();
+    Song(string title1, string artist1, int size1);
+    void setArtist(string name1);
+    string getArtist();
     void setTitle(string title1);
     string getTitle();
     void setSize(int size1);
@@ -25,8 +24,6 @@ public:
     bool operator >(Song const &rhs);
     bool operator <(Song const &rhs);
     bool operator ==(Song const &rhs);
-
-    ~Song();
 };
 
 #endif

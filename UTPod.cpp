@@ -91,6 +91,24 @@ void UtPod:: shuffle(){
         swap(ptr->s,ptr2->s);
     }
 }
+
+void UtPod::sortSongList(){
+    SongNode *temp1 = songs;
+    SongNode *temp2 = songs; 
+    while( temp1 != NULL)
+    {
+        temp2 = temp1;
+        while(temp2 != NULL){
+            if(temp1 ->s) > (temp2 ->s))
+            {
+                swap(temp1,temp2);
+            }
+            temp2 = temp2 -> next;
+        }
+        temp1 = temp1 -> next;
+    }
+}
+
 void UtPod:: showSongList(){
 }
 void UtPod:: clearMemory(){
